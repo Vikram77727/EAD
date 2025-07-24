@@ -1,0 +1,106 @@
+<!-- week 1  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form  target="_blank" action="Rarebird.html">
+            <label for ="sname">StudentName</label><br>
+            <input type ="text" id="sname" name="sname" ><br>
+            <label for="rname">Roll number</label><br>
+            <input type="text" id="rname" name="rname" ><br>
+            <label for="Email" > Email</label><br>
+            <input type="email" id="Email" name="email" ><br>
+            <label for ="Pn">Phone number</label><br>
+            <input type="text" id="pn" name="pn"><br>
+            <label for ="g"> Gender</label><br>
+            <input type="radio" id="pn" name="pn" > Male
+            <label for ="f"> </label>
+            <input type="radio" id="f" name="pn" > Female<br>
+         
+             <select  >
+                <option value="vikram">CSE</option>
+                <option value="vikram">IT</option>
+                <option value="vikram">ECE</option>
+                <option value="vikram">EEE</option>
+             </select><br>
+             <br>
+                <label>ID CARD PHOTO </label><br>
+                <input type="file" id="id card"> <br>
+            <label for ="B"> </label><br>
+            <input type="submit" id="f" name="B" >
+             <br>
+        </form>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+            <th>Day</th>
+            <th>9:00 -10:00</th>
+            <th>10:00 -11:00</th>
+            <th >11:00 -12:00</th>
+            <th>12:00 -1:00</th>
+            <th>1:00 -2:00</th>
+            <th>2:00 -3:00</th>
+            <th>3:00 -4:00</th>
+            </tr>
+            
+            <tr>
+                <td>MONDAY</td>
+                <td colspan="2">EAD Lab (b1) /CNlab(b2)</td>
+                <td>FLAT</td>
+                <td rowspan="8">LUNCH</td>
+                <td>ML</td>
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr><tr>
+                <td>TUESDAY</td>
+                <td colspan="2">ML Lab (b1) /CTlab(b2)</td>
+                <td>EAD</td>
+           
+                <td>CN</td>
+               <td colspan="2">ML Lab (b1) /CTlab(b2)</td>
+            </tr><tr>
+                <td>WEDNEDAY</td>
+                
+                <td>PE-2</td>
+                  <td>PE-2</td>
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+               
+                  <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+              
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr><tr>
+                     <td>THURSDAY</td>
+                
+                <td>FLAT</td>
+                <td>PE-2</td>
+                
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+                
+                  <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+                <td>PE-2</td>
+                <td>PE-2</td>
+                
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>SE</td>
+                <td colspan="2">EAD Lab (b1) /CNlab(b2)</td>
+          
+                <td>ML</td>
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr>
+           
+        </table>
+        <a href="https://google.com" target="_blank">click here</a>
+        
+    </div>
+</body>
+</html>
