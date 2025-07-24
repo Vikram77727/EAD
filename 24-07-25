@@ -1,0 +1,308 @@
+<!-- week 1  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form target="_blank" action="Rarebird.html">
+            <center>
+                <h1>Student Registration Form</h1>
+            </center>
+
+            <label for="sname">StudentName</label><br>
+            <input type="text" id="sname" name="sname"><br>
+            <label for="rname">Roll number</label><br>
+            <input type="text" id="rname" name="rname"><br>
+            <label for="Email"> Email</label><br>
+            <input type="email" id="Email" name="email"><br>
+            <label for="Pn">Phone number</label><br>
+            <input type="text" id="pn" name="pn"><br>
+            <label for="g"> Gender</label><br>
+            <input type="radio" id="pn" name="pn"> Male
+            <label for="f"> </label>
+            <input type="radio" id="f" name="pn"> Female<br>
+
+            <select>
+                <option value="vikram">CSE</option>
+                <option value="vikram">IT</option>
+                <option value="vikram">ECE</option>
+                <option value="vikram">EEE</option>
+            </select><br>
+            <br>
+            <label>ID CARD PHOTO </label><br>
+            <input type="file" id="id card"> <br>
+            <label for="B"> </label><br>
+            <input type="submit" id="f" name="B">
+            <br>
+        </form>
+    </div>
+    <div>
+        <br>
+        <hr>
+        <br>
+        <center>
+            <h1>Table</h1>
+        </center>
+        <table border="1">
+            <tr>
+                <th>Day</th>
+                <th>9:00 -10:00</th>
+                <th>10:00 -11:00</th>
+                <th>11:00 -12:00</th>
+                <th>12:00 -1:00</th>
+                <th>1:00 -2:00</th>
+                <th>2:00 -3:00</th>
+                <th>3:00 -4:00</th>
+            </tr>
+
+            <tr>
+                <td>MONDAY</td>
+                <td colspan="2">EAD Lab (b1) /CNlab(b2)</td>
+                <td>FLAT</td>
+                <td rowspan="8">LUNCH</td>
+                <td>ML</td>
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr>
+            <tr>
+                <td>TUESDAY</td>
+                <td colspan="2">ML Lab (b1) /CTlab(b2)</td>
+                <td>EAD</td>
+
+                <td>CN</td>
+                <td colspan="2">ML Lab (b1) /CTlab(b2)</td>
+            </tr>
+            <tr>
+                <td>WEDNEDAY</td>
+
+                <td>PE-2</td>
+                <td>PE-2</td>
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr>
+            <tr>
+                <td>THURSDAY</td>
+
+                <td>FLAT</td>
+                <td>PE-2</td>
+
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+
+                <td colspan="1">EAD Lab (b1) /CNlab(b2)</td>
+                <td>PE-2</td>
+                <td>PE-2</td>
+
+            </tr>
+            <tr>
+                <td>FRIDAY</td>
+                <td>SE</td>
+                <td colspan="2">EAD Lab (b1) /CNlab(b2)</td>
+
+                <td>ML</td>
+                <td>PE-2</td>
+                <td>SE</td>
+            </tr>
+
+        </table>
+        <a href="https://google.com" target="_blank">click here</a>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <form action="#">
+            <center>
+                <h1>Feedback Form</h1>
+            </center>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" rows="4" cols="40" required></textarea><br><br>
+            <label>How satisfied are you?</label><br>
+            <input type="radio" id="satisfied" name="satisfaction" value="Satisfied" required>
+            <label for="satisfied">Satisfied</label>
+
+            <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+            <label for="neutral">Neutral</label>
+
+            <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied">
+            <label for="unsatisfied">Unsatisfied</label>
+            <br><br>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+         <br>
+            <hr>
+            <br>
+        <form action="#">
+            <center>
+                <h1>Feedback Form - 2</h1>
+            </center>
+            <br>
+
+           
+            <table>
+
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="message">Feedback:</label></td>
+                    <td><textarea id="message" name="message" rows="4" cols="30" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label>Satisfaction:</label></td>
+                    <td>
+                        <input type="radio" id="satisfied" name="satisfaction" value="Satisfied" required>
+                        <label for="satisfied">Satisfied</label>
+
+                        <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+                        <label for="neutral">Neutral</label>
+
+                        <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied">
+                        <label for="unsatisfied">Unsatisfied</label>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+        <br>
+            <hr>
+            <br>
+      
+            <center>
+                <h1>Introduction to MERN Stack</h1>
+            </center>
+
+  <p>The MERN stack is a popular set of technologies used for building modern full-stack web applications. It includes tools for both frontend and backend development, using JavaScript throughout.</p>
+
+
+  <ol>
+    <li>MongoDB</li>
+    <li>Express.js</li>
+    <li>React</li>
+    <li>Node.js</li>
+  </ol>
+  <img src="https://thekiranacademy.com/img/MERN-full-stack2.png" alt="MERN Stack Image">
+
+  <p>Learn more about <a href="https://www.mongodb.com" target="_blank">MongoDB here</a>.</p>
+
+  <hr>
+  <br>
+            <hr>
+            <br>
+ <center>
+                <h1>Fieldset and Legend</h1>
+            </center>
+  <form>
+    <fieldset>
+      <legend>User Information</legend>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age"><br><br>
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+ <br>
+            <hr>
+            <br>
+
+ <center> <h1>Vikram Thatikonda</h1></center>
+
+  <h3>Contact Information:</h3>
+  Email:
+  <a href="email to:vikram200577@gmail.com">vikram200577@gmail.com</a><br>
+     Phone: +91-9876543210<br>
+     Location: Hyderabad, India
+  </p>
+
+  <hr>
+
+  <h3>Education:</h3>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <th>Degree</th>
+      <th>Institution</th>
+      <th>Year</th>
+      <th>Percentage/CGPA</th>
+    </tr>
+    <tr>
+      <td>B.Tech in CSE</td>
+      <td>CBIT, Hyderabad</td>
+      <td>2027</td>
+      <td>8.2 CGPA</td>
+    </tr>
+    <tr>
+      <td>Intermediate (MPC)</td>
+      <td>Sri Chaitanya Junior College, Khammam</td>
+      <td>2023</td>
+      <td>95%</td>
+    </tr>
+    <tr>
+      <td>SSC</td>
+      <td>Sri Chaitanya School</td>
+      <td>2021</td>
+      <td>10 GPA</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h3>Skills:</h3>
+  <ul>
+    <li>C/C++</li>
+    <li>Java</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Python (Basic)</li>
+    <li>SQL, SQLite</li>
+    <li>Data Structures and Algorithms</li>
+  </ul>
+
+  <hr>
+
+  <h3>About Me:</h3>
+  <p>
+    I am a passionate computer science student with an interest in software development,
+    problem solving, and web technologies. I enjoy building practical applications
+    and learning new technologies like machine learning and cloud computing. I’m
+    currently aiming to become a Cloud Engineer.
+  </p>
+
+
+</body>
+
+</html>
