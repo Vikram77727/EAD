@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Board</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #eee;
+    }
+    #chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 60px);
+      grid-template-rows: repeat(8, 60px);
+      border: 4px solid #333;
+    }
+    .square {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+    }
+    .white {
+      background-color: #f0d9b5;
+    }
+    .black {
+      background-color: #b58863;
+    }
+  </style>
+</head>
+<body>
+  <div id="chessboard"></div>
+  <script>
+    const board = document.getElementById("chessboard");
+    const pieces = [
+      ["♜","♞","♝","♛","♚","♝","♞","♜"],
+      ["♟","♟","♟","♟","♟","♟","♟","♟"],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["♙","♙","♙","♙","♙","♙","♙","♙"],
+      ["♖","♘","♗","♕","♔","♗","♘","♖"]
+    ];
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const square = document.createElement("div");
+        square.classList.add("square");
+        if ((row + col) % 2 === 0) {
+          square.classList.add("white");
+        } else {
+          square.classList.add("black");
+        }
+        square.textContent = pieces[row][col];
+        board.appendChild(square);
+      }
+    }
+  </script>
+</body>
+</html>
