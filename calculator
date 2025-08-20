@@ -21,15 +21,18 @@
       box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
     }
     #display {
-      width: 100%;
-      height: 50px;
-      margin-bottom: 15px;
-      font-size: 22px;
-      text-align: right;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
+  width: 90%;
+  height: 50px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #111; 
+  color: #00ffcc;        
+}
+
     .buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -40,45 +43,54 @@
       font-size: 18px;
       border: none;
       border-radius: 8px;
-      background-color: #4CAF50;
       color: white;
       cursor: pointer;
       transition: 0.2s;
     }
-    button:hover {
-      background-color: #45a049;
-    }
-    .zero {
-      grid-column: span 2;
-    }
+    .number { background-color: #3b3b98; }     
+    .number:hover { background-color: #2d2d7a; }
+
+    .operator { background-color: #f39c12; }     
+    .operator:hover { background-color: #d68910; }
+
+    .equal { background-color: #27ae60; }      
+    .equal:hover { background-color: #1e8449; }
+
+    .clear { background-color: #e74c3c; }      
+    .clear:hover { background-color: #c0392b; }
+
+    .delete { background-color: #f1c40f; color: black; }
+    .delete:hover { background-color: #d4ac0d; }
+
+    .zero { grid-column: span 2; }
   </style>
 </head>
 <body>
   <div class="calculator">
     <input type="text" id="display" disabled>
     <div class="buttons">
-      <button class="btn" id="clear">C</button>
-      <button class="btn" id="delete">DEL</button>
-      <button class="btn" id="divide">/</button>
-      <button class="btn" id="multiply">*</button>
+      <button class="btn clear">C</button>
+      <button class="btn delete">DEL</button>
+      <button class="btn operator">/</button>
+      <button class="btn operator">*</button>
 
-      <button class="btn" id="seven">7</button>
-      <button class="btn" id="eight">8</button>
-      <button class="btn" id="nine">9</button>
-      <button class="btn" id="minus">-</button>
+      <button class="btn number">7</button>
+      <button class="btn number">8</button>
+      <button class="btn number">9</button>
+      <button class="btn operator">-</button>
 
-      <button class="btn" id="four">4</button>
-      <button class="btn" id="five">5</button>
-      <button class="btn" id="six">6</button>
-      <button class="btn" id="plus">+</button>
+      <button class="btn number">4</button>
+      <button class="btn number">5</button>
+      <button class="btn number">6</button>
+      <button class="btn operator">+</button>
 
-      <button class="btn" id="one">1</button>
-      <button class="btn" id="two">2</button>
-      <button class="btn" id="three">3</button>
-      <button class="btn" id="equals">=</button>
+      <button class="btn number">1</button>
+      <button class="btn number">2</button>
+      <button class="btn number">3</button>
+      <button class="btn equal">=</button>
 
-      <button class="btn zero" id="zero">0</button>
-      <button class="btn" id="dot">.</button>
+      <button class="btn number zero">0</button>
+      <button class="btn number">.</button>
     </div>
   </div>
 
