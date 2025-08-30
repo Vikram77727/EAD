@@ -1,0 +1,546 @@
+Experiment 1: Design a Student Timetable using Bootstrap Containers, Grid, Images, and Buttons
+•	Create a timetable webpage using container/container-fluid and grid system.
+•	Each cell should display subject info and a small Bootstrap button for “Details”.
+•	Add subject logos/icons using .img-fluid.
+•	Analyze: Compare the effect of using .container vs .container-fluid on layout width.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Timetable</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Try changing between container and container-fluid -->
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Student Timetable</h2>
+
+  <div class="row text-center fw-bold bg-primary text-white p-2">
+    <div class="col">Day/Time</div>
+    <div class="col">9 - 10 AM</div>
+    <div class="col">10 - 11 AM</div>
+    <div class="col">11 - 12 PM</div>
+    <div class="col">12 - 1 PM</div>
+  </div>
+
+  <!-- Monday Row -->
+  <div class="row text-center align-items-center border p-2">
+    <div class="col fw-bold">Monday</div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/mathematics.png" class="img-fluid" alt="Math">
+      <p>Math</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/physics.png" class="img-fluid" alt="Physics">
+      <p>Physics</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/literature.png" class="img-fluid" alt="English">
+      <p>English</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/biology.png" class="img-fluid" alt="Biology">
+      <p>Biology</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+  </div>
+
+  <!-- Tuesday Row -->
+  <div class="row text-center align-items-center border p-2">
+    <div class="col fw-bold">Tuesday</div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/computer.png" class="img-fluid" alt="CS">
+      <p>Computer</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/chemistry.png" class="img-fluid" alt="Chemistry">
+      <p>Chemistry</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/history.png" class="img-fluid" alt="History">
+      <p>History</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+    <div class="col">
+      <img src="https://img.icons8.com/color/48/000000/music.png" class="img-fluid" alt="Music">
+      <p>Music</p>
+      <button class="btn btn-sm btn-primary">Details</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+Experiment 2: Build a College Website Header with Navbar, Tabs/Pills, and Alerts
+•	Create a Navbar with brand name and menu items (Home, Departments, Contact).
+•	Add a Tabs/Pills section below it to switch between content (Overview, Notices, Help).
+•	Show Bootstrap Alerts inside the Notices tab (e.g., “Admissions Open!”).
+•	Analyze: Discuss when Tabs/Pills are better than separate pages.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🔹 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">MyCollege</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Departments</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔹 Tabs/Pills Section -->
+<div class="container mt-4">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-overview-tab" data-bs-toggle="pill" data-bs-target="#pills-overview" type="button" role="tab">Overview</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-notices-tab" data-bs-toggle="pill" data-bs-target="#pills-notices" type="button" role="tab">Notices</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-help-tab" data-bs-toggle="pill" data-bs-target="#pills-help" type="button" role="tab">Help</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    
+    <!-- Overview Content -->
+    <div class="tab-pane fade show active" id="pills-overview" role="tabpanel">
+      <h4>About Our College</h4>
+      <p>Welcome to MyCollege! We offer diverse academic programs, modern facilities, and vibrant campus life.</p>
+    </div>
+    
+    <!-- Notices with Alerts -->
+    <div class="tab-pane fade" id="pills-notices" role="tabpanel">
+      <h4>Important Notices</h4>
+      <div class="alert alert-success mt-2" role="alert">
+        🎓 Admissions Open! Apply before September 30.
+      </div>
+      <div class="alert alert-warning" role="alert">
+        ⚠️ Mid-term exams will begin from October 10.
+      </div>
+      <div class="alert alert-info" role="alert">
+        📢 College Fest “EduSpark 2025” coming soon!
+      </div>
+    </div>
+    
+    <!-- Help Content -->
+    <div class="tab-pane fade" id="pills-help" role="tabpanel">
+      <h4>Need Help?</h4>
+      <p>Contact us at <a href="mailto:support@mycollege.edu">support@mycollege.edu</a> or call +1-234-567-890.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+Experiment 3: Design a Student Registration System using Forms and Modals
+•	Create a Registration Form (Name, Email, Password, Gender, Skills, Country).
+•	Add validation (is-valid, is-invalid).
+•	Open the form inside a Modal when “Register” button is clicked from navbar.
+•	Analyze: Compare usability of placing the form inside a Modal vs a standalone page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🔹 Navbar with Register Button -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">MyCollege</a>
+    <div class="ms-auto">
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal">
+        Register
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔹 Modal with Registration Form -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">Student Registration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      
+      <!-- Modal Body with Form -->
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          
+          <!-- Name -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="valid-feedback">Valid email!</div>
+            <div class="invalid-feedback">Enter a valid email.</div>
+          </div>
+          
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" minlength="6" required>
+            <div class="valid-feedback">Strong password!</div>
+            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+          </div>
+          
+          <!-- Gender -->
+          <div class="mb-3">
+            <label class="form-label">Gender</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" required>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" required>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="invalid-feedback d-block">Please select gender.</div>
+          </div>
+          
+          <!-- Skills -->
+          <div class="mb-3">
+            <label class="form-label">Skills</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="html">
+              <label class="form-check-label" for="html">HTML</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="css">
+              <label class="form-check-label" for="css">CSS</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="js">
+              <label class="form-check-label" for="js">JavaScript</label>
+            </div>
+          </div>
+          
+          <!-- Country -->
+          <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-select" required>
+              <option value="">Choose...</option>
+              <option>USA</option>
+              <option>India</option>
+              <option>UK</option>
+              <option>Canada</option>
+            </select>
+            <div class="invalid-feedback">Please select your country.</div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Form Validation Script -->
+<script>
+  (() => {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+
+</body>
+</html>
+
+
+Experiment 4: Create a Campus Gallery using Bootstrap Carousel and Cards
+•	Implement a Carousel with 3 images of campus life (auto-sliding).
+•	Add captions and a call-to-action button inside each slide.
+•	Below the carousel, display Cards for “Library”, “Labs”, “Sports” in a grid layout.
+•	Analyze: Modify data-bs-interval and compare how it changes carousel behavior.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 🔹 Carousel Section -->
+<div id="campusCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Campus 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Welcome to Our Campus</h3>
+        <p>Experience world-class education and culture.</p>
+        <button class="btn btn-primary btn-sm">Explore More</button>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Campus 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Vibrant Student Life</h3>
+        <p>Join clubs, fests, and cultural activities.</p>
+        <button class="btn btn-success btn-sm">Join Us</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" data-bs-interval="6000">
+      <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="Campus 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Modern Facilities</h3>
+        <p>Equipped labs, digital classrooms, and sports arenas.</p>
+        <button class="btn btn-warning btn-sm">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- 🔹 Cards Section -->
+<div class="container my-5">
+  <div class="row g-4">
+
+    <!-- Library Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://picsum.photos/400/200?random=4" class="card-img-top" alt="Library">
+        <div class="card-body">
+          <h5 class="card-title">Library</h5>
+          <p class="card-text">A digital library with 50,000+ books, journals, and research papers.</p>
+          <a href="#" class="btn btn-primary">Visit Library</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Labs Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://picsum.photos/400/200?random=5" class="card-img-top" alt="Labs">
+        <div class="card-body">
+          <h5 class="card-title">Labs</h5>
+          <p class="card-text">State-of-the-art labs for Computer Science, Physics, and Chemistry.</p>
+          <a href="#" class="btn btn-success">Explore Labs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sports Card -->
+    <div class="col-md-4">
+      <div class="card shadow">
+        <img src="https://picsum.photos/400/200?random=6" class="card-img-top" alt="Sports">
+        <div class="card-body">
+          <h5 class="card-title">Sports</h5>
+          <p class="card-text">Indoor & outdoor sports facilities with professional coaching.</p>
+          <a href="#" class="btn btn-warning">Join Sports</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+Experiment 5: Develop a Student Records Dashboard using Bootstrap Tables and Alerts
+•	Create a responsive table (.table, .table-striped, .table-hover) to show student details.
+•	Add a filter form above the table.
+•	Show a dismissible Alert if no records are found.
+•	Analyze: Compare .table-responsive at table-level vs container-level for mobile view.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Records Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+  <h2 class="mb-4 text-center">📊 Student Records Dashboard</h2>
+
+  <!-- 🔹 Filter Form -->
+  <form id="filterForm" class="row g-3 mb-3">
+    <div class="col-md-4">
+      <input type="text" class="form-control" id="searchName" placeholder="Search by Name">
+    </div>
+    <div class="col-md-4">
+      <select id="searchDept" class="form-select">
+        <option value="">Select Department</option>
+        <option>Computer Science</option>
+        <option>Physics</option>
+        <option>Mathematics</option>
+        <option>Biology</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-primary w-100">Filter</button>
+    </div>
+  </form>
+
+  <!-- 🔹 Alert for No Records -->
+  <div id="noRecordsAlert" class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+    ⚠️ No student records found!
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
+
+  <!-- 🔹 Responsive Table -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+        <tr>
+          <td>1</td>
+          <td>Alice Johnson</td>
+          <td>Computer Science</td>
+          <td>alice@example.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bob Smith</td>
+          <td>Physics</td>
+          <td>bob@example.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Charlie Brown</td>
+          <td>Mathematics</td>
+          <td>charlie@example.com</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Diana White</td>
+          <td>Biology</td>
+          <td>diana@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 🔹 Simple Filtering Script -->
+<script>
+  const form = document.getElementById('filterForm');
+  const nameInput = document.getElementById('searchName');
+  const deptSelect = document.getElementById('searchDept');
+  const tableRows = document.querySelectorAll('#studentTable tr');
+  const alertBox = document.getElementById('noRecordsAlert');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let found = false;
+    const nameFilter = nameInput.value.toLowerCase();
+    const deptFilter = deptSelect.value;
+
+    tableRows.forEach(row => {
+      const name = row.cells[1].innerText.toLowerCase();
+      const dept = row.cells[2].innerText;
+      const match = (!nameFilter || name.includes(nameFilter)) &&
+                    (!deptFilter || dept === deptFilter);
+
+      if (match) {
+        row.style.display = '';
+        found = true;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    // Show/hide alert
+    alertBox.classList.toggle('d-none', found);
+  });
+</script>
+
+</body>
+</html>
